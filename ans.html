@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>my site</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="icon" href="favicon.ico">
+    <link r href="css/style1.css">
+    <div class="sections">
+      <table cellspacing="40">
+        <tr>
+          <td><a href="ans.html">Home</a></td>
+          <td><a href="library.html"></a></td>
+          <td> <a href="arts.html">Arts & Crafts</a></td>
+          <td><a href="sports.html"> Sports</a></td>
+          <td><a href="yoga.html"> Yoga</a></td>
+          <td><a href="dance.html">Dance Club</a></td>
+          <td><a href="sing.html"> Singing</a></td>
+        </tr>
+</table>
+    </div>
+
+    <div class="a">
+      <table cellspacing="40">
+        <tr>
+          <td><img class="im1"src="monogram.png" alt="monogram"></td>
+          <td>  <h1>Raghunandan Tiwari Pushtakalaya and Club</h1></td>
+        </tr>
+      </table>
+
+     <p class="z">
+        It's for you.</p></div>
+      <div class="about">
+
+      <h2 >Raghunandan Tiwari pushtakalaya and club was established by Raghunandan Tiwari and Ramyatan Tiwari in 1956.Their motto was
+        to make the students of their area more educated and skilled.Students from all the background
+      are making  use of this library.They are participating in the events organised by club and are showing
+      their hidden talents.</h2>
+
+  </div>
+
+    <script type = "text/javascript">
+           function displayNextImage() {
+               x = (x === images.length - 1) ? 0 : x + 1;
+               document.getElementById("img").src = images[x];
+           }
+
+           function displayPreviousImage() {
+               x = (x <= 0) ? images.length - 1 : x - 1;
+               document.getElementById("img").src = images[x];
+           }
+
+           function startTimer() {
+               setInterval(displayNextImage, 3000);
+           }
+
+           var images = [], x = -1;
+           images[0] = "image2.png";
+           images[1] = "image3.jpg";
+            images[2] = "image4.png";
+       </script>
+</html>
+  </head>
+
+  <div class="x">
+
+    <body onload = "startTimer()">
+        <img id="img" src="image2.jpg"/>
+        <button type="button" onclick="displayPreviousImage()">Previous</button>
+        <button type="button" onclick="displayNextImage()">Next</button>
+      </div>
+        </body>
+
+</html>
