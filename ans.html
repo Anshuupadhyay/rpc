@@ -2,194 +2,259 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>My Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/style1.css">
-  <link rel="icon" href="favicon.ico">
+<title>Raghunandan Tiwari Pushtakalaya and Club</title>
 
-  <style>
+<link rel="icon" href="favicon.ico">
 
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-    }
+<style>
 
-    h1{
-      margin-top:0;
-      font-size:60px;
-    }
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    img{
-      height:370px;
-      max-width:1000px;
-    }
+/* Navigation */
 
-    .sections{
-      background-color:violet;
-      font-size:20px;
-      padding:10px;
-      text-align:center;
-    }
+nav{
+    background-color:violet;
+    padding:15px;
+    text-align:center;
+}
 
-    .sections a{
-      text-decoration:none;
-      color:white;
-      margin:0 15px;
-    }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+}
 
-    .mefix{
-      position:fixed;
-      background-color:violet;
-      padding:5px;
-    }
+/* Header */
 
-    .me{
-      height:50px;
-    }
+header{
+    background:black;
+    color:white;
+    padding:40px;
+}
 
-    .a{
-      background-color:black;
-      color:white;
-      text-align:center;
-      font-size:40px;
-      padding:10px;
-    }
+.header-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+}
 
-    .z{
-      font-size:30px;
-    }
+header img{
+    height:200px;
+}
 
-    .about{
-      background-color:black;
-      color:white;
-      font-size:20px;
-      padding:10px;
-      text-align:center;
-    }
+header h1{
+    font-size:50px;
+    margin:0;
+}
 
-    .im1{
-      height:300px;
-    }
+.tagline{
+    font-size:25px;
+}
 
-    .x{
-      padding:10px;
-      background-color:black;
-      text-align:center;
-    }
+/* About */
 
-    .president{
-      background-color:black;
-      color:white;
-      padding:20px;
-    }
+.about{
+    background:black;
+    color:white;
+    padding:40px;
+    text-align:center;
+    font-size:20px;
+}
 
-    .pre{
-      font-size:30px;
-    }
+/* Slider */
 
-    .pre2{
-      font-size:25px;
-    }
+.slider{
+    background:black;
+    text-align:center;
+    padding:20px;
+}
 
-  </style>
+.slider img{
+    width:80%;
+    max-width:900px;
+}
 
-  <script>
-    var images = ["image2.png","image3.jpg","image4.png"];
-    var x = 0;
+/* President */
 
-    function displayNextImage(){
-      x = (x === images.length - 1) ? 0 : x + 1;
-      document.getElementById("img").src = images[x];
-    }
+.president{
+    background:black;
+    color:white;
+    padding:40px;
+}
 
-    function displayPreviousImage(){
-      x = (x === 0) ? images.length - 1 : x - 1;
-      document.getElementById("img").src = images[x];
-    }
+.president-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+}
 
-    function startTimer(){
-      setInterval(displayNextImage,3000);
-    }
-  </script>
+.president img{
+    height:250px;
+}
+
+.president h2{
+    font-size:30px;
+}
+
+/* Footer */
+
+footer{
+    background:violet;
+    text-align:center;
+    padding:15px;
+    font-size:16px;
+}
+
+.creator{
+    position:fixed;
+    top:0;
+    left:0;
+    background:violet;
+    padding:5px 10px;
+}
+
+.creator img{
+    height:40px;
+    vertical-align:middle;
+}
+
+</style>
+
+<script>
+
+let images = ["image2.png","image3.jpg","image4.png"];
+let index = 0;
+
+function nextImage(){
+    index = (index + 1) % images.length;
+    document.getElementById("slider-img").src = images[index];
+}
+
+function previousImage(){
+    index = (index - 1 + images.length) % images.length;
+    document.getElementById("slider-img").src = images[index];
+}
+
+function startSlider(){
+    setInterval(nextImage,3000);
+}
+
+</script>
 
 </head>
 
-<body onload="startTimer()">
+<body onload="startSlider()">
 
-  <!-- Navigation -->
-  <div class="sections">
-    <a href="ans.html">Home</a>
-    <a href="library.html">Library</a>
-    <a href="arts.html">Arts & Crafts</a>
-    <a href="sports.html">Sports</a>
-    <a href="yoga.html">Yoga</a>
-    <a href="dance.html">Dance Club</a>
-    <a href="sing.html">Singing</a>
-  </div>
+<div class="creator">
+<img src="newp.png">
+Created by: Anshu Upadhyay
+</div>
 
-  <!-- Creator -->
-  <div class="mefix">
-    <table>
-      <tr>
-        <td><img class="me" src="newp.png" alt="Profile picture"></td>
-        <td>
-          <p>Created by:<br> Anshu Upadhyay</p>
-        </td>
-      </tr>
-    </table>
-  </div>
+<!-- Navigation -->
 
-  <!-- Header -->
-  <div class="a">
-    <table align="center" cellspacing="40">
-      <tr>
-        <td><img class="im1" src="monogram.png" alt="monogram"></td>
-        <td>
-          <h1>Raghunandan Tiwari Pushtakalaya and Club</h1>
-          <p class="z">It's for you.</p>
-        </td>
-      </tr>
-    </table>
-  </div>
+<nav>
 
-  <!-- About -->
-  <div class="about">
-    <h2>
-      Raghunandan Tiwari Pushtakalaya and Club was established by
-      Raghunandan Tiwari and Ramyatan Tiwari in 1956. Their motto was
-      to make the students of their area more educated and skilled.
-      Students from all backgrounds use this library and participate
-      in the events organized by the club, showing their hidden talents.
-    </h2>
-  </div>
+<a href="ans.html">Home</a>
+<a href="library.html">Library</a>
+<a href="arts.html">Arts & Crafts</a>
+<a href="sports.html">Sports</a>
+<a href="yoga.html">Yoga</a>
+<a href="dance.html">Dance Club</a>
+<a href="sing.html">Singing</a>
 
-  <!-- Image Slider -->
-  <div class="x">
-    <img id="img" src="image2.jpg" alt="slider">
-    <br><br>
-    <button onclick="displayPreviousImage()">Previous</button>
-    <button onclick="displayNextImage()">Next</button>
-  </div>
+</nav>
 
-  <!-- President Section -->
-  <div class="president">
-    <table align="center" cellspacing="40">
-      <tr>
-        <td>
-          <img src="president.png" alt="President">
-        </td>
-        <td>
-          <h2 class="pre">President (Smt. Naina Shukla)</h2>
-          <p class="pre2">
-            An entrepreneur and social worker. She works continuously to
-            develop Raghunandan Tiwari Pushtakalaya and Club. She encourages
-            students to read books and participate in co-curricular activities.
-          </p>
-        </td>
-      </tr>
-    </table>
-  </div>
+<!-- Header -->
+
+<header>
+
+<div class="header-container">
+
+<img src="monogram.png">
+
+<div>
+<h1>Raghunandan Tiwari Pushtakalaya and Club</h1>
+<p class="tagline">It's for you.</p>
+</div>
+
+</div>
+
+</header>
+
+<!-- About Section -->
+
+<section class="about">
+
+<p>
+Raghunandan Tiwari Pushtakalaya and Club was established in 1956 by
+Raghunandan Tiwari and Ramyatan Tiwari. Their vision was to make
+students of the area more educated and skilled.
+</p>
+
+<p>
+Students from all backgrounds use this library and participate in
+club activities where they showcase their talents and skills.
+</p>
+
+</section>
+
+<!-- Image Slider -->
+
+<section class="slider">
+
+<img id="slider-img" src="image2.png">
+
+<br><br>
+
+<button onclick="previousImage()">Previous</button>
+<button onclick="nextImage()">Next</button>
+
+</section>
+
+<!-- President Section -->
+
+<section class="president">
+
+<div class="president-container">
+
+<img src="president.png">
+
+<div>
+
+<h2>President (Smt. Naina Shukla)</h2>
+
+<p>
+An entrepreneur and social worker dedicated to the progress
+of Raghunandan Tiwari Pushtakalaya and Club.
+</p>
+
+<p>
+She continuously encourages students to read more books and
+participate in co-curricular activities.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+© 2026 Raghunandan Tiwari Pushtakalaya and Club
+
+</footer>
 
 </body>
 </html>
